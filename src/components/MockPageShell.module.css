@@ -36,6 +36,10 @@
   padding: 32px 24px 64px;
 }
 
+.mainWide {
+  max-width: 1120px;
+}
+
 .title {
   margin: 0 0 12px;
   font-size: clamp(28px, 4vw, 36px);

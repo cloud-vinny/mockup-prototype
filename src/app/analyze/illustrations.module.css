@@ -1,0 +1,108 @@
+/* Segmentation demo */
+.segmentPanel {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #2d333d;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+}
+
+.segmentSvg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.measurements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  padding: 14px 16px;
+  background: rgba(0, 0, 0, 0.35);
+  font-size: 13px;
+  font-weight: 600;
+  color: #e8f2ff;
+}
+
+/* Detection demo */
+.detectWrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  max-height: 320px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+}
+
+.detectImage {
+  object-fit: cover;
+}
+
+.sensorBadge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #e8f2ff;
+  background: rgba(15, 30, 45, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bbox {
+  position: absolute;
+  z-index: 1;
+  border: 2px solid #c084fc;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.bboxLabel {
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  margin-bottom: 4px;
+  padding: 3px 6px;
+  max-width: 180px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #faf5ff;
+  background: rgba(88, 28, 135, 0.92);
+  border-radius: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Disclaimer */
+.disclaimerCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 220px;
+  padding: 32px 24px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+}
+
+.warningIcon {
+  flex-shrink: 0;
+}
+
+.disclaimerWord {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fde68a;
+}

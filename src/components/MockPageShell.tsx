@@ -6,10 +6,17 @@ import styles from "./MockPageShell.module.css";
 type MockPageShellProps = {
   title: string;
   lead?: string;
+  /** Wider content column for two-column feature layouts (e.g. Analyze). */
+  wide?: boolean;
   children: ReactNode;
 };
 
-export function MockPageShell({ title, lead, children }: MockPageShellProps) {
+export function MockPageShell({
+  title,
+  lead,
+  wide = false,
+  children,
+}: MockPageShellProps) {
   return (
     <div className={styles.shell}>
       <div className={styles.bgWrap} aria-hidden>
@@ -24,7 +31,7 @@ export function MockPageShell({ title, lead, children }: MockPageShellProps) {
       </div>
       <div className={styles.overlay} aria-hidden />
       <SiteHeader />
-      <main className={styles.main}>
+      <main className={wide ? `${styles.main} ${styles.mainWide}` : styles.main}>
         <h1 className={styles.title}>{title}</h1>
         {lead ? <p className={styles.lead}>{lead}</p> : null}
         {children}
