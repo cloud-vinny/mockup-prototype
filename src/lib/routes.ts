@@ -5,8 +5,7 @@ export type NavItem = {
 
 /** Primary mockup navigation — static routes only. */
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: "/" },
-  { label: "Analyze", href: "/analyze" },
-  { label: "Results", href: "/results" },
-  { label: "About us", href: "/about" },
+  { label: "Home", href: "/home" },
+  { label: "Analyse", href: "/analyze" },
+  { label: "About", href: "/about" },
 ];

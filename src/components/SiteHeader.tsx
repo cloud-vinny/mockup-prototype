@@ -10,7 +10,7 @@ export function SiteHeader() {
 
   return (
     <header className={styles.header}>
-      <Link href="/" className={styles.brand}>
+      <Link href="/home" className={styles.brand}>
         Fish AI
       </Link>
       <nav aria-label="Primary">
@@ -28,6 +28,45 @@ export function SiteHeader() {
           ))}
         </ul>
       </nav>
+      <div className={styles.headerActions}>
+        <Link href="/profile" className={styles.iconBtn} aria-label="Profile">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <circle cx="12" cy="8" r="4" stroke="currentColor" strokeWidth="1.8" />
+            <path
+              d="M4 20c0-4 3.6-7 8-7s8 3 8 7"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+            />
+          </svg>
+        </Link>
+        <Link href="/login" className={styles.iconBtn} aria-label="Sign out">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path
+              d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+            />
+            <polyline
+              points="16 17 21 12 16 7"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <line
+              x1="21"
+              y1="12"
+              x2="9"
+              y2="12"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+            />
+          </svg>
+        </Link>
+      </div>
     </header>
   );
 }

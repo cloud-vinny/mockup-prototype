@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FishAI mockup prototype (deploy repo)
 
-## Getting Started
+Standalone Next.js app used for **Vercel deployment** and demos. The UI is kept in sync with the main capstone repo’s `web/` app (`Capstone-FishAI/web`). If branch deploys on the main repo are awkward, point Vercel at **this repository** and set the project root to the repo root (default).
 
-First, run the development server:
+## Prototype overview
+
+- Login, home, analyse, results, about, profile (mock flows)
+- Results page: sample detections, filters, water-quality indicator
+- **Floating results chatbot** (bottom-right): suggestion prompts + mock replies derived from the **currently filtered** table data (not a real model yet)
+
+## Tech stack
+
+- Next.js (App Router)
+- React + TypeScript
+- CSS Modules
+- ESLint
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Import this Git repo in Vercel
+- Framework: **Next.js**
+- Root directory: **.** (repository root)
+- Build: `npm run build`, Output: Next default
 
-## Learn More
+## Notes for team
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Detection data is **mock** for UX/demo
+- Keep `src/lib/routes.ts` and header/nav links aligned when adding routes

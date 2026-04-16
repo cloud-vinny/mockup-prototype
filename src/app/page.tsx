@@ -1,12 +1,5 @@
-import type { Metadata } from "next";
-import { FishAiLanding } from "@/components/FishAiLanding";
+import { redirect } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: "Fish AI — Home",
-  description:
-    "Discover underwater species analysis — scan and review footage (mockup).",
-};
-
-export default function Home() {
-  return <FishAiLanding />;
+export default function RootPage() {
+  redirect("/login");
 }

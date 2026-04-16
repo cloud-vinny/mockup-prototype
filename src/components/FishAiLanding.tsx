@@ -24,7 +24,7 @@ export function FishAiLanding() {
       <main className={styles.main}>
         <div className={styles.copy}>
           <h1 className={styles.headline}>
-            Discover the Wonders Colorful
+            Discover the Wonders Colourful
             <br />
             Fish in the Ocean
           </h1>

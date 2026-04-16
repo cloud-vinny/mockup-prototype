@@ -1,0 +1,141 @@
+.shell {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+  background: var(--fish-canvas);
+  color: #fff;
+}
+
+.bgWrap {
+  position: absolute;
+  inset: 0;
+  transform: scaleY(-1) rotate(180deg);
+  z-index: 0;
+}
+
+.bgImage {
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: var(--fish-teal);
+  pointer-events: none;
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 48px 40px 80px;
+}
+
+.grid {
+  display: grid;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+  }
+}
+
+.sectionTitle {
+  margin: 0 0 24px;
+  font-size: clamp(22px, 3vw, 26px);
+  font-weight: 600;
+}
+
+/* Profile form */
+
+.fieldGroup {
+  margin-bottom: 16px;
+}
+
+.fieldLabel {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: var(--fish-subtext);
+}
+
+.field {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 15px;
+}
+
+.field:disabled {
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+.btnReset {
+  display: block;
+  width: 100%;
+  margin-top: 24px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: transparent;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+.btnDelete {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #b03030;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: not-allowed;
+}
+
+/* Past results */
+
+.resultList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resultCard {
+  padding: 14px 18px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.resultDate {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.resultLine {
+  margin: 0;
+  font-size: 14px;
+  color: var(--fish-subtext);
+  line-height: 1.6;
+}
